@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "psl-compiler"
+version = "0.1.0"
+description = "Compiles PSL (visual sign) identifiers for computing concepts into Python via a tokenizer + AST parser."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]

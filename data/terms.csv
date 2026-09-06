@@ -1,0 +1,33 @@
+id,term,category,token_type,default_value,psl_video_id,video_status,dictionary_match,dictionary_url,dictionary_note
+continue_statement,Continue Statement,Control Flow,CONTINUE,,,not_recorded,exact,https://psl.org.pk/dictionary/72-verbs/4932-continue,Direct verb match
+type_casting,Type Casting,Variables & Data,TYPE_CAST,,,not_recorded,partial,https://psl.org.pk/dictionary/72-verbs/4934-convert,Verb convert -- verify covers type conversion specifically
+index,Index,Data Structures,INDEX,,,not_recorded,exact,https://psl.org.pk/dictionary/57-nouns-general/3454-index,Direct noun match -- verify data-structure indexing sense vs book-index sense
+function,Function,Functions & Structure,FUNCTION_DEF,,,not_recorded,exact,https://psl.org.pk/dictionary/57-nouns-general/3416-function,Direct noun match
+return_statement,Return Statement,Functions & Structure,RETURN,,,not_recorded,exact,https://psl.org.pk/dictionary/72-verbs/5210-return,Direct verb match
+default_parameter,Default Parameter,Functions & Structure,DEFAULT_PARAM,,,not_recorded,partial,https://psl.org.pk/dictionary/28-computer/6290-default,"Dictionary sign likely means default settings, not function default parameter specifically -- needs fluent-signer check"
+import_statement,Import Statement,Functions & Structure,IMPORT,,,not_recorded,partial,https://psl.org.pk/dictionary/28-computer/6318-import,"Verify video shows code-import sense, not general data import"
+object,Object,Object-Oriented Programming,OBJECT,,,not_recorded,exact,https://psl.org.pk/dictionary/57-nouns-general/3533-object,Direct noun match -- verify OOP sense vs generic physical object sense
+constructor,Constructor,Object-Oriented Programming,CONSTRUCTOR,,,not_recorded,partial,https://psl.org.pk/dictionary/72-verbs/4930-construct,"Verb construct -- general building sense, verify OOP relevance"
+compiler,Compiler,Syntax & Compilation,COMPILER,,,not_recorded,partial,https://psl.org.pk/dictionary/72-verbs/4913-compile,"Verb form compile -- verify sense matches software compilation, not general compiling/gathering"
+print_statement,Print Statement,Input / Output & Files,PRINT,,,not_recorded,exact,https://psl.org.pk/dictionary/72-verbs/5170-print,Direct verb match
+file,File,Input / Output & Files,FILE,,,not_recorded,partial,https://psl.org.pk/dictionary/28-computer/6278-computer-file,Labeled Computer file in dictionary -- confirm generic file sense
+file_read,File Read,Input / Output & Files,FILE_READ,,,not_recorded,exact,https://psl.org.pk/dictionary/72-verbs/5180-read,Direct verb match for the read action
+file_write,File Write,Input / Output & Files,FILE_WRITE,,,not_recorded,exact,https://psl.org.pk/dictionary/72-verbs/5324-write,Direct verb match for the write action
+database,Database,Software Engineering Concepts,DATABASE,,,not_recorded,exact,https://psl.org.pk/dictionary/57-nouns-general/3305-database,Direct noun match (also appeared as concept in Computer category)
+server,Server,Software Engineering Concepts,SERVER,,,not_recorded,exact,https://psl.org.pk/dictionary/28-computer/6566-server,"Same concept, low risk"
+client,Client,Software Engineering Concepts,CLIENT,,,not_recorded,exact,https://psl.org.pk/dictionary/59-office/3741-client,Direct noun match
+number,Number,Variables & Data,NUMBER,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/2988-number,Confirmed
+digit,Digit,Variables & Data,NUMBER,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/2958-digit,Confirmed
+decimal,Decimal,Variables & Data,FLOAT,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/2955-decimal,Confirmed
+addition,Addition,Operators & Expressions,OP_ADD,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/2939-addition,Confirmed
+subtraction,Subtraction,Operators & Expressions,OP_SUBTRACT,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/3014-subtraction,Confirmed
+multiplication,Multiplication,Operators & Expressions,OP_MULTIPLY,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/2985-multiplication,Confirmed
+division,Division,Operators & Expressions,OP_DIVIDE,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/2959-division,Confirmed
+less_than,Less Than,Operators & Expressions,OP_LESS_THAN,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/2976-less-than,Confirmed
+greater_than,Greater Than,Operators & Expressions,OP_GREATER_THAN,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/2969-greater-than,Confirmed
+equivalent,Equivalent,Operators & Expressions,OP_EQUAL,,,not_recorded,partial,https://psl.org.pk/dictionary/53-mathematics/7393-equivalent,Verify covers == sense specifically
+curly_bracket,Curly Bracket,Syntax & Compilation,BRACE,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/7343-curly-bracket,Confirmed
+square_brackets,Square Brackets,Syntax & Compilation,BRACKET,,,not_recorded,exact,https://psl.org.pk/dictionary/53-mathematics/7738-square-brackets,Confirmed
+finite_set,Set,Data Structures,SET,,,not_recorded,partial,https://psl.org.pk/dictionary/53-mathematics/7421-finite-set,"Verify general set sense, not just math finite-set"
+comma,Comma,Syntax & Compilation,COMMA,,,not_recorded,exact,https://psl.org.pk/dictionary/41-grammar/2223-comma,Confirmed
+full_stop,Full Stop / Period,Syntax & Compilation,PERIOD,,,not_recorded,exact,https://psl.org.pk/dictionary/41-grammar/2231-full-stop,Confirmed
