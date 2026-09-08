@@ -39,7 +39,10 @@ Treat these as candidates, not final, until reviewed.
    token (e.g. the sign for "number" -> the token `NUMBER`).
 3. **Parser / AST** — takes a stream of tokens and organizes them into an
    Abstract Syntax Tree.
-4. **Code generator** *(future work)* — walks the AST and emits Python.
+4. **Code generator** — walks the AST and emits real, runnable Python
+   source. Proven end-to-end: a real PSL sign sequence tokenizes, parses,
+   and compiles to Python that has actually been executed and produces
+   the correct output.
 
 ## Pipeline
 
@@ -53,7 +56,7 @@ PSL sign / video frame
    [ Parser ]      ->  builds an Abstract Syntax Tree (AST)
         |
         v
-   [ Codegen ]     ->  Python source code   (future)
+   [ Codegen ]     ->  Python source code, executed and verified
 ```
 
 ## Project layout
@@ -80,9 +83,11 @@ psl-compiler/
 - [x] Tokenizer error handling: `UnknownIdentifierError`, safe mode, `is_known()`, `unknown_identifiers()` (Week 2)
 - [x] Parser: arithmetic/comparison expressions with correct precedence, bracket grouping, print/return statements (Week 2)
 - [x] Individual digit signs (one, two, three, five, seven, eight, nine, ten, twenty, hundred) wired in as real literal values -- first genuine end-to-end sign-sequence -> AST flow (Week 2)
+- [x] Code generator: AST -> real Python source. Full pipeline proven end-to-end -- a real sign sequence tokenizes, parses, compiles, and *executes* with the correct output (Week 2)
 - [ ] Fluent-signer verification of the 9 `partial` matches
 - [ ] Confirm whether signs for "four" and "six" exist (not found in the Numbers category page checked so far)
-- [ ] AST parsing for function definitions (blocked: no PSL sign yet for user-defined names/identifiers)
+- [ ] Function definitions with real bodies (blocked: no PSL sign yet for user-defined names/identifiers)
+- [ ] Known limitation: a bare `return` at the top level generates syntactically invalid standalone Python (Python requires `return` inside a function) -- needs a decision once function bodies are parseable
 - [ ] Sign development with Deaf Reach / FESF for loop/if-else/boolean/array
 
 ## Getting started

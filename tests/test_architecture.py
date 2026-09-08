@@ -8,7 +8,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from psl_compiler.ast.nodes import BinaryExpression, Literal, PrintStatement, ReturnStatement
+from psl_compiler.ast.nodes import BinaryExpression, Literal, PrintStatement, Program, ReturnStatement
+from psl_compiler.codegen.generator import CodegenError, generate
 from psl_compiler.glossary.loader import Glossary
 from psl_compiler.parser.parser import ParseError, Parser
 from psl_compiler.tokenizer.engine import TokenizationEngine, UnknownIdentifierError
@@ -157,3 +158,47 @@ def test_end_to_end_real_sign_sequence_produces_correct_value():
     assert expr.operator == "OP_ADD"
     assert expr.left == Literal(value=1)
     assert expr.right == Literal(value=2)
+
+
+def test_codegen_simple_addition():
+    expr = BinaryExpression(left=Literal(value=1), operator="OP_ADD", right=Literal(value=2))
+    code = generate(Program(body=[expr]))
+    assert code == "(1 + 2)"
+
+
+def test_codegen_print_statement():
+    stmt = PrintStatement(value=Literal(value=5))
+    code = generate(Program(body=[stmt]))
+    assert code == "print(5)"
+
+
+def test_codegen_unknown_node_raises():
+    class FakeNode:
+        pass
+
+    try:
+        generate(Program(body=[FakeNode()]))
+        assert False, "expected CodegenError"
+    except CodegenError:
+        pass
+
+
+def test_end_to_end_sign_sequence_to_executable_python():
+    """
+    The full pipeline: real PSL identifiers -> tokens -> AST -> Python
+    source -> actually run it and check the real output. This is the
+    proof that the whole chain works, not just each stage in isolation.
+    """
+    engine = TokenizationEngine()
+    tokens = engine.tokenize_sequence(["print_statement", "number_one", "addition", "number_two"])
+    program = Parser(tokens).parse()
+    code = generate(program)
+    assert code == "print((1 + 2))"
+
+    import io
+    from contextlib import redirect_stdout
+
+    buffer = io.StringIO()
+    with redirect_stdout(buffer):
+        exec(code)  # noqa: S102 -- generated code is our own trusted test fixture
+    assert buffer.getvalue().strip() == "3"
