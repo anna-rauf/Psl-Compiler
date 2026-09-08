@@ -1,10 +1,12 @@
 """
 Abstract Syntax Tree node definitions.
 
-Week 1 scope: sketch the node shapes so the rest of the architecture has
-something concrete to import against.
-Week 3 scope (not yet implemented): actual parsing rules that build these
-nodes from a token stream (see src/psl_compiler/parser/).
+v1 scope: only nodes for concepts with a confirmed or candidate PSL
+dictionary sign (see data/terms.json / README.md). Notably absent:
+VariableAssignment, LoopBlock, ConditionalBlock -- variables, loops, and
+if/else have no PSL dictionary match yet, so a parser can't honestly build
+these until that vocabulary exists (see README's "Not yet supported in
+v1"). Add them back once those signs are confirmed or coined.
 """
 
 from dataclasses import dataclass, field
@@ -23,33 +25,36 @@ class Program(ASTNode):
 
 
 @dataclass
-class VariableAssignment(ASTNode):
-    name: str
+class Literal(ASTNode):
+    """A numeric literal (from a NUMBER or FLOAT token)."""
+
+    value: int | float
+
+
+@dataclass
+class BinaryExpression(ASTNode):
+    """
+    A binary operation, e.g. Literal(2) OP_ADD Literal(3).
+
+    operator is the TokenType name (e.g. "OP_ADD", "OP_LESS_THAN") rather
+    than a raw symbol, so it stays traceable back to the PSL sign that
+    produced it.
+    """
+
+    left: ASTNode
+    operator: str
+    right: ASTNode
+
+
+@dataclass
+class PrintStatement(ASTNode):
+    """A print statement wrapping a single expression."""
+
     value: ASTNode
 
 
 @dataclass
-class Literal(ASTNode):
-    value: str | int | float
+class ReturnStatement(ASTNode):
+    """A return statement wrapping a single expression."""
 
-
-@dataclass
-class LoopBlock(ASTNode):
-    """Represents a loop and the statements inside it."""
-
-    condition: ASTNode | None
-    body: list[ASTNode] = field(default_factory=list)
-
-
-@dataclass
-class ConditionalBlock(ASTNode):
-    condition: ASTNode
-    body: list[ASTNode] = field(default_factory=list)
-    else_body: list[ASTNode] = field(default_factory=list)
-
-
-@dataclass
-class FunctionDefinition(ASTNode):
-    name: str
-    params: list[str] = field(default_factory=list)
-    body: list[ASTNode] = field(default_factory=list)
+    value: ASTNode

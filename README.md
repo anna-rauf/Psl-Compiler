@@ -77,9 +77,10 @@ psl-compiler/
 
 - [x] Repo + architecture (Week 1)
 - [x] v1 term list, 32 terms with confirmed/candidate PSL dictionary signs (Week 1)
+- [x] Tokenizer error handling: `UnknownIdentifierError`, safe mode, `is_known()`, `unknown_identifiers()` (Week 2)
+- [x] Parser: arithmetic/comparison expressions with correct precedence, bracket grouping, print/return statements (Week 2)
 - [ ] Fluent-signer verification of the 9 `partial` matches
-- [ ] Tokenization engine upgrades (recognition adapter, error handling)
-- [ ] AST parsing rules
+- [ ] AST parsing for function definitions (blocked: no PSL sign yet for user-defined names/identifiers)
 - [ ] Sign development with Deaf Reach / FESF for loop/if-else/boolean/array
 
 ## Getting started
@@ -93,6 +94,15 @@ pytest
 
 ## Open design questions
 
+- **How does a specific numeric value get expressed?** Right now a PSL
+  sign for "number" tokenizes to the *concept* NUMBER, but there's no
+  mechanism yet for signing a specific value (e.g. "5") -- this blocks
+  turning real sign sequences into a working arithmetic expression, even
+  though the parser can already handle a hardcoded `Literal(5)`.
+- **How would a function get a name?** `FUNCTION_DEF` exists as a token,
+  but user-defined names (function names, parameters) have no PSL sign
+  concept yet -- unclear if that should be fingerspelling, a separate
+  identifier system, or something else entirely.
 - What exactly counts as a "PSL identifier" as input -- a still image, a
   video frame, a pre-labeled dataset entry, or live camera input?
 - Should the AST target real executable Python, or just a structural
