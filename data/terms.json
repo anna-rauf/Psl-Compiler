@@ -383,6 +383,126 @@
       "default_value": null,
       "psl_video_id": null,
       "video_status": "not_recorded"
+    },
+    {
+      "id": "number_one",
+      "term": "One",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "1",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/6006-one",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_two",
+      "term": "Two",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "2",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/7775-two",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_three",
+      "term": "Three",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "3",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/7761-three",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_five",
+      "term": "Five",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "5",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/7426-five",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_seven",
+      "term": "Seven",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "7",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/7708-seven",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_eight",
+      "term": "Eight",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "8",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/7378-eight",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_nine",
+      "term": "Nine",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "9",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/7598-nine",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_ten",
+      "term": "Ten",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "10",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/3702-10",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_twenty",
+      "term": "Twenty",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "20",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/3703-20",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "number_hundred",
+      "term": "One Hundred",
+      "category": "Variables & Data",
+      "token_type": "NUMBER_LITERAL",
+      "default_value": "100",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": "exact",
+      "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/3711-100",
+      "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
     }
   ]
 }

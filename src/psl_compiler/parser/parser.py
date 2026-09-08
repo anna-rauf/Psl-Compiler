@@ -115,9 +115,15 @@ class Parser:
         if token is None:
             raise ParseError("Expected a value but reached end of input.")
 
-        if token.type in (TokenType.NUMBER, TokenType.FLOAT):
+        if token.type in (TokenType.NUMBER, TokenType.FLOAT, TokenType.NUMBER_LITERAL):
             self._advance()
-            return Literal(value=token.value if token.value is not None else 0)
+            if token.value is None:
+                return Literal(value=0)
+            try:
+                value = int(token.value)
+            except ValueError:
+                value = float(token.value)
+            return Literal(value=value)
 
         if token.type in (TokenType.BRACE, TokenType.BRACKET):
             opening_type = token.type

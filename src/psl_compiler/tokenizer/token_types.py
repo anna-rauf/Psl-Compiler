@@ -22,7 +22,8 @@ class TokenType(Enum):
     CONTINUE = auto()
 
     # Data / literals
-    NUMBER = auto()
+    NUMBER = auto()  # abstract "number" concept/type, not a specific value
+    NUMBER_LITERAL = auto()  # a specific value, e.g. from the sign for "one"
     FLOAT = auto()
     SET = auto()
     INDEX = auto()

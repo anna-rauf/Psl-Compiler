@@ -31,3 +31,13 @@ square_brackets,Square Brackets,Syntax & Compilation,BRACKET,,,not_recorded,exac
 finite_set,Set,Data Structures,SET,,,not_recorded,partial,https://psl.org.pk/dictionary/53-mathematics/7421-finite-set,"Verify general set sense, not just math finite-set"
 comma,Comma,Syntax & Compilation,COMMA,,,not_recorded,exact,https://psl.org.pk/dictionary/41-grammar/2223-comma,Confirmed
 full_stop,Full Stop / Period,Syntax & Compilation,PERIOD,,,not_recorded,exact,https://psl.org.pk/dictionary/41-grammar/2231-full-stop,Confirmed
+number_one,One,Variables & Data,NUMBER_LITERAL,1,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/6006-one,"Confirmed individual digit sign, carries a real literal value"
+number_two,Two,Variables & Data,NUMBER_LITERAL,2,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/7775-two,"Confirmed individual digit sign, carries a real literal value"
+number_three,Three,Variables & Data,NUMBER_LITERAL,3,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/7761-three,"Confirmed individual digit sign, carries a real literal value"
+number_five,Five,Variables & Data,NUMBER_LITERAL,5,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/7426-five,"Confirmed individual digit sign, carries a real literal value"
+number_seven,Seven,Variables & Data,NUMBER_LITERAL,7,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/7708-seven,"Confirmed individual digit sign, carries a real literal value"
+number_eight,Eight,Variables & Data,NUMBER_LITERAL,8,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/7378-eight,"Confirmed individual digit sign, carries a real literal value"
+number_nine,Nine,Variables & Data,NUMBER_LITERAL,9,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/7598-nine,"Confirmed individual digit sign, carries a real literal value"
+number_ten,Ten,Variables & Data,NUMBER_LITERAL,10,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/3702-10,"Confirmed individual digit sign, carries a real literal value"
+number_twenty,Twenty,Variables & Data,NUMBER_LITERAL,20,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/3703-20,"Confirmed individual digit sign, carries a real literal value"
+number_hundred,One Hundred,Variables & Data,NUMBER_LITERAL,100,,not_recorded,exact,https://psl.org.pk/dictionary/58-numbers/3711-100,"Confirmed individual digit sign, carries a real literal value"

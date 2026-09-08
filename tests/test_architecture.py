@@ -140,3 +140,20 @@ def test_parser_raises_on_mismatched_bracket():
         assert False, "expected ParseError"
     except ParseError:
         pass
+
+
+def test_end_to_end_real_sign_sequence_produces_correct_value():
+    """
+    Tokenize a sequence of real PSL identifiers (not hand-built tokens) --
+    the sign for "one", then "addition", then "two" -- and confirm the
+    parser builds the correct AST, with real literal values carried
+    through from the individual digit signs (not the abstract "number"
+    concept).
+    """
+    engine = TokenizationEngine()
+    tokens = engine.tokenize_sequence(["number_one", "addition", "number_two"])
+    expr = Parser(tokens).parse().body[0]
+    assert isinstance(expr, BinaryExpression)
+    assert expr.operator == "OP_ADD"
+    assert expr.left == Literal(value=1)
+    assert expr.right == Literal(value=2)
