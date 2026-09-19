@@ -35,6 +35,14 @@ Treat these as candidates, not final, until reviewed.
 1. **Glossary** — `data/terms.json` / `data/terms.csv`: master list of
    computing terms, each tagged with whether a PSL dictionary sign exists
    (`dictionary_match`: `exact` / `partial` / none) and a link to it.
+   `video_status` tracks where the teaching video for that term comes
+   from: `linked_from_dictionary` means it's sourced from the existing
+   psl.org.pk dictionary (linked out, not re-hosted, per ©FESF) --
+   currently all 42 v1 terms are in this state, since the glossary was
+   built specifically from confirmed dictionary matches. `not_recorded`
+   would mean no video source exists yet at all (relevant again once
+   newly-coined signs, e.g. for loop/if-else, need original video shot
+   with Deaf Reach/FESF).
 2. **Tokenizer** — maps a recognized PSL identifier (a sign) to a software
    token (e.g. the sign for "number" -> the token `NUMBER`).
 3. **Parser / AST** — takes a stream of tokens and organizes them into an
