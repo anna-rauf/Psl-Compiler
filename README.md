@@ -5,6 +5,34 @@ concepts into real, runnable Python code — plus a video glossary that teaches
 each term, linking to existing Pakistan Sign Language (PSL) dictionary signs
 wherever one already exists.
 
+## v2 update: variables, if/else, repeat (provisional signs)
+
+Following an external review of this repo, four real gaps were fixed:
+
+1. **Variables, if/else, and a repeat loop** are now parseable and
+   generate real, properly-indented Python -- using *provisional*
+   signs (`variable_a/b/c`, `assign`, `if_statement`, `else_statement`,
+   `repeat_statement`, `true`, `false` in `data/terms.json`, each with
+   `"dictionary_match": null`). These are placeholders, not confirmed
+   PSL signs -- they exist so the parser/codegen/demo can be built now,
+   but **must be reviewed and replaced with real signs agreed with Deaf
+   Reach/FESF before use with actual learners**. Only three variable
+   slots exist (`a`, `b`, `c`) since there's still no PSL sign concept
+   for arbitrary user-defined names.
+2. **Curly brackets now mean "block start/end"** exclusively (used by
+   if/else and repeat bodies); square brackets are the only expression
+   grouping delimiter. Previously both meant the same thing, which
+   blocked curly brackets from ever meaning "block."
+3. **The code generator now supports indentation** (4 spaces per
+   nested level), required for if/else/repeat bodies to generate valid
+   Python.
+4. **A top-level `return` now raises a clear `CodegenError`** instead
+   of silently emitting Python that would fail with `SyntaxError` when
+   run. `return` is still only valid inside a function body, and
+   function bodies still aren't parseable (see open design questions).
+
+New runnable demos: `examples/demo_if.py`, `examples/demo_loop.py`.
+
 ## v1 restart scope (this Week 1)
 
 Earlier work explored a 164-term glossary spanning full programming
@@ -92,11 +120,15 @@ psl-compiler/
 - [x] Parser: arithmetic/comparison expressions with correct precedence, bracket grouping, print/return statements (Week 2)
 - [x] Individual digit signs (one, two, three, five, seven, eight, nine, ten, twenty, hundred) wired in as real literal values -- first genuine end-to-end sign-sequence -> AST flow (Week 2)
 - [x] Code generator: AST -> real Python source. Full pipeline proven end-to-end -- a real sign sequence tokenizes, parses, compiles, and *executes* with the correct output (Week 2)
-- [ ] Fluent-signer verification of the 9 `partial` matches
+- [x] Variables, if/else, and repeat loops, with indentation support and a fixed curly/square bracket distinction -- using **provisional, unverified** signs pending Deaf Reach/FESF (v2)
+- [x] Top-level `return` now raises a clear error instead of generating broken Python (v2, fixes a review-flagged bug)
+- [ ] Fluent-signer verification of the 9 `partial` matches AND the new provisional v2 signs (variable_a/b/c, assign, if_statement, else_statement, repeat_statement, true, false) -- none of these are real confirmed PSL signs yet
 - [ ] Confirm whether signs for "four" and "six" exist (not found in the Numbers category page checked so far)
 - [ ] Function definitions with real bodies (blocked: no PSL sign yet for user-defined names/identifiers)
-- [ ] Known limitation: a bare `return` at the top level generates syntactically invalid standalone Python (Python requires `return` inside a function) -- needs a decision once function bodies are parseable
-- [ ] Sign development with Deaf Reach / FESF for loop/if-else/boolean/array
+- [ ] Lists/arrays (not yet designed or parseable)
+- [ ] Student-facing click-based interface (so learners select signs, not type English identifier strings) -- this is the actual point of the project and doesn't exist yet
+- [ ] Visual/rule-based error system (currently errors surface as Python exceptions/tracebacks, in English)
+- [ ] Sign development with Deaf Reach / FESF for loop/if-else/boolean/array/variable (provisional placeholders exist in code now, but need real signs)
 
 ## Getting started
 

@@ -21,6 +21,21 @@ class TokenType(Enum):
     RETURN = auto()
     CONTINUE = auto()
 
+    # Control flow (provisional signs -- see data/terms.json dictionary_match:
+    # null and README.md; no confirmed PSL dictionary sign yet, pending
+    # sign development with Deaf Reach/FESF)
+    IF = auto()
+    ELSE = auto()
+    REPEAT = auto()
+
+    # Variables (provisional signs -- same caveat as above)
+    ASSIGN = auto()
+    VARIABLE = auto()
+
+    # Booleans (provisional signs -- same caveat as above)
+    TRUE = auto()
+    FALSE = auto()
+
     # Data / literals
     NUMBER = auto()  # abstract "number" concept/type, not a specific value
     NUMBER_LITERAL = auto()  # a specific value, e.g. from the sign for "one"

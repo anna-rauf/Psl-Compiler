@@ -503,6 +503,114 @@
       "dictionary_match": "exact",
       "dictionary_url": "https://psl.org.pk/dictionary/58-numbers/3711-100",
       "dictionary_note": "Confirmed individual digit sign, carries a real literal value"
+    },
+    {
+      "id": "assign",
+      "term": "Assign",
+      "category": "Variables & Data",
+      "token_type": "ASSIGN",
+      "default_value": null,
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
+    },
+    {
+      "id": "variable_a",
+      "term": "Variable A",
+      "category": "Variables & Data",
+      "token_type": "VARIABLE",
+      "default_value": "a",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
+    },
+    {
+      "id": "variable_b",
+      "term": "Variable B",
+      "category": "Variables & Data",
+      "token_type": "VARIABLE",
+      "default_value": "b",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
+    },
+    {
+      "id": "variable_c",
+      "term": "Variable C",
+      "category": "Variables & Data",
+      "token_type": "VARIABLE",
+      "default_value": "c",
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
+    },
+    {
+      "id": "if_statement",
+      "term": "If",
+      "category": "Control Flow",
+      "token_type": "IF",
+      "default_value": null,
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
+    },
+    {
+      "id": "else_statement",
+      "term": "Else",
+      "category": "Control Flow",
+      "token_type": "ELSE",
+      "default_value": null,
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
+    },
+    {
+      "id": "repeat_statement",
+      "term": "Repeat",
+      "category": "Control Flow",
+      "token_type": "REPEAT",
+      "default_value": null,
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
+    },
+    {
+      "id": "true",
+      "term": "True",
+      "category": "Booleans & Logic",
+      "token_type": "TRUE",
+      "default_value": null,
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
+    },
+    {
+      "id": "false",
+      "term": "False",
+      "category": "Booleans & Logic",
+      "token_type": "FALSE",
+      "default_value": null,
+      "psl_video_id": null,
+      "video_status": "not_recorded",
+      "dictionary_match": null,
+      "dictionary_url": null,
+      "dictionary_note": "Provisional placeholder -- no confirmed PSL sign yet. Needs a real sign agreed with Deaf Reach/FESF (or Anayat's Deaf staff) before use with real learners; this id is a stand-in so the parser/codegen can be built and demoed now."
     }
   ]
 }
