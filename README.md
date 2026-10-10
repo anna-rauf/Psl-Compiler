@@ -5,6 +5,20 @@ concepts into real, runnable Python code — plus a video glossary that teaches
 each term, linking to existing Pakistan Sign Language (PSL) dictionary signs
 wherever one already exists.
 
+## Sign Card Builder (click-based interface)
+
+```
+python examples/sign_card_builder.py
+```
+
+A Tkinter window (offline, standard-library only) where every glossary
+sign is a button. Click signs in order to build a program, press Run,
+and see the generated Python and its output. Each card has a play
+button that opens the sign's official PSL dictionary entry (linked, not
+re-hosted); provisional signs have no entry yet, so their button is
+greyed out. Buttons are still text labels -- showing the actual sign
+video/image on each card is the next step once sign media is available.
+
 ## v2 update: variables, if/else, repeat (provisional signs)
 
 Following an external review of this repo, four real gaps were fixed:
@@ -126,7 +140,7 @@ psl-compiler/
 - [ ] Confirm whether signs for "four" and "six" exist (not found in the Numbers category page checked so far)
 - [ ] Function definitions with real bodies (blocked: no PSL sign yet for user-defined names/identifiers)
 - [ ] Lists/arrays (not yet designed or parseable)
-- [ ] Student-facing click-based interface (so learners select signs, not type English identifier strings) -- this is the actual point of the project and doesn't exist yet
+- [x] Student-facing click-based interface (`examples/sign_card_builder.py`): learners click signs instead of typing identifiers. Cards are still text labels with a link to the dictionary video; embedding sign images/video is future work
 - [ ] Visual/rule-based error system (currently errors surface as Python exceptions/tracebacks, in English)
 - [ ] Sign development with Deaf Reach / FESF for loop/if-else/boolean/array/variable (provisional placeholders exist in code now, but need real signs)
 
